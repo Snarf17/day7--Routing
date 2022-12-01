@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/detail.css">
+    <title>Details Project</title>
+</head>
+<body>
+   <!-- Navbar -->
+   
+   <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="/public/img/logo.png" width="45px" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav d-flex">
+          <li class="nav-item">
+            <a class="nav-link fw-bold" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item"> 
+            <a class="nav-link" href="/add-project/123">Add Project</a>
+          </li>
+        </ul>
+        <div class="d-flex w-100 justify-content-end">
+            <a href="/contact" class="btn btn-danger button">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- ENd Navbar -->
+
+<main class="mt-5">
+    <h2>{{.Project.Title}}</h2>
+    <div class="main-info">
+        <img src="/public/img/digital.jpg" width="600px">
+    <div class="wrapper-info">
+            <h3>Duration</h3>
+            <div class="span-time">
+                <div>
+                    <img src="/public/icon-svg/calendar.svg" alt="">
+                    <span>{{.Project.DateStart}} | {{.Project.DateEnd}}</span>
+                </div>
+                <br>
+                <!-- <hr style="opacity: 0;"> -->
+                <div>
+                    <img src="/public/icon-svg/time.svg" alt="">
+                    <span>1 Month</span>
+                </div>
+            </div>
+            <h3 class="mt-4">Technologies</h3>
+            <div class="tech-info">
+               <div>
+                   <img src="/public/icon-svg/nodejs.svg" alt="">
+                   <span>Node.js</span>
+   
+                   <img src="/public/icon-svg/reactjs.svg" alt="">
+                   <span>React.js</span>
+               </div>
+               <div>
+                   <img src="/public/icon-svg/nextjs.svg" alt="" width="40px">
+                   <span>Next.js</span>
+   
+                   <img src="/public/icon-svg/typescript.svg" alt="">
+                   <span>Typescript</span>
+               </div>
+            </div>
+        </div>
+    </div>    
+    </div>
+        
+        <p>
+           {{.Project.Content}}
+        </p>
+       
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+</main>
+</body>
+</html>
